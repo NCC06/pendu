@@ -3,17 +3,19 @@
 #include <math.h>
 #include <time.h>
 #include <string.h>
+#include "pendu.h"
 
 int ft_random_number(int max)
 {
     int random_number;
-    
+   
+    srand(time(NULL)); 
     random_number = rand() % max;
     
     return random_number;
 }
      
-int main(void)
+char *random_word(void)
 {
     FILE* dico = NULL;
     char word_to_find[30] = {0};    
@@ -54,8 +56,6 @@ int main(void)
     word_to_find[strlen(word_to_find) - 1] = '\0';    
     fclose(dico);
 
-    printf("%s", word_to_find);
-
-    return (EXIT_SUCCESS);
+    return word_to_find; 
 
 }
