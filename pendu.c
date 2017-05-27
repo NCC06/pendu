@@ -15,10 +15,9 @@ int ft_random_number(int max)
     return random_number;
 }
      
-char *random_word(void)
+int ft_random_word(char *word_to_pick)
 {
-    FILE* dico = NULL;
-    char word_to_find[30] = {0};    
+    FILE* dico = NULL;   
     int number_of_words = 0;
     int picked_word_number = 0;
     char read_letter = 0;
@@ -51,11 +50,10 @@ char *random_word(void)
             picked_word_number--;
     }
 
-    fgets(word_to_find, 30, dico);       
+    fgets(word_to_pick, 30, dico);       
 
-    word_to_find[strlen(word_to_find) - 1] = '\0';    
+    word_to_pick[strlen(word_to_pick) - 1] = '\0';    
     fclose(dico);
 
-    return word_to_find; 
-
+    return(EXIT_SUCCESS);
 }
