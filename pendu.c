@@ -56,4 +56,4 @@ int ft_random_word(char *word_to_pick)
     fclose(dico);
 
     return(EXIT_SUCCESS);
-}
+}       

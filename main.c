@@ -10,5 +10,5 @@ int main(void)
 
     printf("%s", motMystere);
 
-    return(EXIT_SUCCESS);
+    return EXIT_SUCCESS;
 }
